@@ -2,7 +2,7 @@ project "GLFW"
     kind "StaticLib"
     language "C"
     
-	targetdir (outputdir)
+    targetdir (outputdir)
     objdir ("/%{prj.name}/" .. outputdir)
 
 	files
@@ -36,10 +36,10 @@ project "GLFW"
             "src/osmesa_context.c"
         }
 
-		defines 
-		{ 
+        defines 
+        { 
             "_GLFW_WIN32",
             "_CRT_SECURE_NO_WARNINGS"
-		}
+        }
     filter { "system:windows", "configurations:Release" }
         buildoptions "/MT"
